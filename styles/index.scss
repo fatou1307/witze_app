@@ -1,0 +1,144 @@
+@use "variables" as *;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: $background;
+  color: $text-color;
+  font-family: $font-text;
+}
+#app {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 1rem;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+
+  @include tablet-and-up() {
+    margin-top: 4rem;
+  }
+}
+
+.heading {
+  font-family: $font-display;
+  color: $primary-color;
+  font-size: 60px;
+}
+
+.current-joke {
+  margin-top: 2rem;
+  background-color: $elevation-anhebung;
+  padding: 2rem;
+
+  @include tablet-and-up() {
+    margin-top: 4rem;
+    width: 100%;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+  }
+
+  &__actions {
+    margin-top: 3rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    @include tablet-and-up() {
+      flex-direction: row;
+    }
+  }
+
+  &__generate,
+  &__save {
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid $primary-color;
+    border-radius: 4px;
+    transition: 0.2s all ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($primary-color, 5);
+      border-color: darken($primary-color, 5);
+    }
+  }
+
+  &__generate,
+  &__save:hover {
+    background-color: $primary-color;
+    color: #000;
+  }
+
+  &__save {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  &__save-icon {
+    width: 1.5rem;
+  }
+}
+
+.saved-jokes {
+  margin-top: 4rem;
+
+  @include tablet-and-up() {
+    margin-top: 6rem;
+  }
+  &__heading {
+    font-size: 2rem;
+    font-family: $font-display;
+    color: $primary-color;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+
+.saved-joke {
+  background-color: $elevation-anhebung;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  @include tablet-and-up() {
+    padding: 1.5rem;
+  }
+
+  &__remove {
+    height: fit-content;
+    border: none;
+    background-color: $danger-color;
+    color: $text-color;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s all ease-in-out;
+
+    &:hover {
+      background-color: darken($danger-color, 10);
+    }
+  }
+
+  &__remove-icon {
+    width: 1.2rem;
+  }
+}

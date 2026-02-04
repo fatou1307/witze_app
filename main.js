@@ -64,7 +64,7 @@ function renderSavedJokes() {
            </button>
     </div>   `;
   });
-  if (!html) html = "<em>Noch keine Witze gespeichert!</em>";
+  if (!html) html = "<em>Noch keine Witze gespeichert.</em>";
 
   savedJokesListEl.innerHTML = html;
 }

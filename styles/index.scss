@@ -9,6 +9,85 @@ body {
   color: $text-color;
   font-family: $font-text;
 }
+
+body.lightmode {
+  background-color: $bg-lightmode;
+  color: $text-color;
+  font-family: $font-text;
+  h1.heading {
+    color: $secondary-light;
+    font-family: "Alfa Slab One", serif;
+  }
+
+  .current-joke {
+    background-color: $anhebungLight;
+
+    &__generate,
+    &__save:hover {
+      background-color: $secondary-light;
+      color: #000;
+    }
+
+    &__generate {
+      background-color: $secondary-light;
+      color: $light-text;
+      border: 1px solid $secondary-light;
+      &:hover {
+        color: $light-text;
+        background-color: $primary-color;
+      }
+
+      &__save {
+        color: red;
+        border: 1px solid $secondary-light;
+
+        &:hover {
+          background-color: darken($secondary-light, 5%);
+          border-color: darken($secondary-light, 5%);
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .saved-joke {
+    background-color: lighten($anhebungLight, 5%);
+    color: $light-text;
+  }
+  .saved-jokes__heading {
+    font-family: $font-display-light;
+    color: $secondary-light;
+  }
+}
+
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+#theme-switch svg {
+  fill: $text-color;
+}
+
+#theme-switch svg:last-child {
+  display: none;
+}
+.lightmode #theme-switch svg:first-child {
+  display: none;
+}
+.lightmode #theme-switch svg:last-child {
+  display: block;
+}
+
 #app {
   max-width: 800px;
   margin: 40px auto;

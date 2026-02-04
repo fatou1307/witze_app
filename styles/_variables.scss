@@ -1,15 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 $background: #333;
-$text-color: white;
+$text-color: black;
 $font-text: "Inter", sans-serif;
-$primary-color: #04da4b;
+$primary-color: #28f204;
 $font-display: "Rubik Scribble", cursive;
 $elevation-anhebung: #444;
 $danger-color: #f02f2f;
+
+$bg-lightmode: #fff;
+$light-text: #0c0c0c;
+$anhebungLight: #cac9c9c3;
+$secondary-light: #28f204;
+$font-display-light: "Alfa Slab One", serif;
 
 @mixin tablet-and-up() {
   @media only screen and (min-width: 600px) {
     @content;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
